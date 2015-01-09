@@ -196,6 +196,20 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+var maker = function () {
+  //create empty array
+  var array = [];
+  //loop through the array, as long as it is less than 216, push i onto the array
+  for (var i = 1; i <= 215; i++) {
+    array.push(i);
+  }
+  return array;
+};
+
+maker();
+
+
+
 
 
 //Next Problem
