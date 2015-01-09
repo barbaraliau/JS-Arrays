@@ -221,7 +221,16 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
+var addTen = function (array) {
+  var newArray = [];
+  for (var i = 0; i < array.length; i++) {
+    var tenAdded = parseInt(array[i]) + 10;
+    newArray.push(tenAdded);
+  }
+  return newArray;
+};
 
+addTen(numbers);
 
 //Next Problem
 
