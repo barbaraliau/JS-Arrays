@@ -162,7 +162,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
+  var removeItem = function(arrayList, itemToRemove) {
+    for (var i = 0; i < arrayList.length; i++) {
+      if (arrayList[i] === itemToRemove) {
+        arrayList.splice(i, 1);
+      }
+       return arrayList;
+    }
+  };
 
+  var addItem = function(arrayList, itemToAdd) {
+    for (var i = 0; i < arrayList.length; i++) {
+      if (arrayList[i] !== itemToAdd) {
+        arrayList.push(itemToAdd);
+      }
+      return arrayList;
+    }
+  };
+
+  removeItem("chips");
+  addItem("Jerky");
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
