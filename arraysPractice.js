@@ -65,10 +65,14 @@ var evenFinder = function(array) {
   for (var i = 0; i <= array.length; i++) {
     if (array[i] % 2 !== 0 ) {
       array.splice(i, 1);
-    }    
+      i--;
+    }  
+    return array;  
   }
-  //return array;
+  
 };
+
+evenFinder(nums)
 
 
 //Next problem
