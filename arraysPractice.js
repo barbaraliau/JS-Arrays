@@ -22,6 +22,7 @@ var arr = [40,50,60];
     return array[array.length - 1];
   };
 
+last(arr);
 
 //Next Problem
 
@@ -51,7 +52,7 @@ var reversedLooper = function(array) {
   }
 };
 
-
+reversedLooper(letters);
 
 //Next Problem
 
@@ -61,7 +62,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
   //Code Here
 var evenFinder = function(array) {
-  for (var i = 0; i < array.length; i++) {
+  for (var i = 0; i <= array.length; i++) {
     if (array[i] % 2 !== 0 ) {
       array.splice(i, 1);
     }    
@@ -92,7 +93,7 @@ var divider = function(nums, evens, odds) {
   return nums;
 };
 
-  
+  divider(nums, evens, odds);
 
 
 //Next Problem
@@ -126,6 +127,8 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
     } 
   };
 
+  finder(numbers);
+
 //Next problem
 
 
@@ -141,6 +144,7 @@ var str = 'this is my sentence';
     return string;
   };
 
+  reverse(str);
 
 //Next Problem
 
@@ -157,6 +161,8 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+
+
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
