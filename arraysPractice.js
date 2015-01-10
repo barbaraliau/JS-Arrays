@@ -62,17 +62,16 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
   //Code Here
 var evenFinder = function(array) {
-  for (var i = 0; i <= array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     if (array[i] % 2 !== 0 ) {
       array.splice(i, 1);
       i--;
     }  
-    return array;  
   }
-  
+  return array;
 };
 
-evenFinder(nums)
+evenFinder(nums);
 
 
 //Next problem
@@ -254,6 +253,16 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
+
+  var longestArr = function(array1, array2) {
+    if (array1.length > array2.length) {
+      return array1;
+    } else {
+      return array2;
+    }
+  };
+
+  longestArr(arr1, arr2);
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
