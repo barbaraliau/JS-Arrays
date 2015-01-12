@@ -10,7 +10,7 @@ var arr = [10,20,30];
 
   first(arr);
 
-//Next problem
+////////////////////////////////Next problem//////////////////////////////
 
 
 
@@ -24,7 +24,8 @@ var arr = [40,50,60];
 
 last(arr);
 
-//Next Problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
@@ -38,7 +39,8 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   looper(family);
 
 
-//Next problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 
@@ -54,7 +56,8 @@ var reversedLooper = function(array) {
 
 reversedLooper(letters);
 
-//Next Problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 var nums = [1,2,3,6,22,98,45,23,22,12];
@@ -65,16 +68,26 @@ var evenFinder = function(array) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] % 2 !== 0 ) {
       array.splice(i, 1);
-      i--;
+      i--; // when something is spliced out, the index moves forward and skips the next number. this will let you loop back and check the index value that was just skipped
     }  
   }
   return array;
 };
 
+//alternate solution: go backwards through the array
+var evenFinder = function(array) {
+  for (var i = arr.length - 1; i >=0; i--) {
+    if (array[i] % 2 !==0) {
+      array.splice(i, 1);
+    }
+  }
+};
+
 evenFinder(nums);
 
 
-//Next problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
@@ -99,7 +112,8 @@ var divider = function(nums, evens, odds) {
   divider(nums, evens, odds);
 
 
-//Next Problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 var getRandomArbitrary = function() {
@@ -118,21 +132,35 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
     var myRandomNum = getRandomArbitrary(); 
     // lets me see the random number
     console.log(myRandomNum); 
+    console.log(array);
     //run a for-loop to go through array
     for (var i = 0; i < array.length; i++) { 
       // checks to see if myRandomNum is in the array
       if (array[i] === myRandomNum) { 
         // says what to do if it is or if it isn't
         return true; 
-      } else { 
-        return false;
-      }
-    } 
+      } 
+    }
+    return false;
   };
 
   finder(numbers);
 
-//Next problem
+// alternate solution using indexOf. indexOf will automatically loop through array. no need for for loop
+
+  var finder2 = function (array) {
+    var myRandomNum = getRandomArbitrary();
+    console.log(myRandomNum);
+    if (array.indexOf(myRandomNum) !== -1) {
+      return true;
+    }
+    return false;
+  };
+
+
+
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 
@@ -149,7 +177,8 @@ var str = 'this is my sentence';
 
   reverse(str);
 
-//Next Problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
@@ -191,7 +220,8 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 
 
-//Next Problem
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 
@@ -213,9 +243,8 @@ maker();
 
 
 
+////////////////////////////////Next problem//////////////////////////////
 
-
-//Next Problem
 
 
 var numbers = [5, '9', 16, 19, '25', '34', 48];
@@ -235,7 +264,9 @@ var addTen = function (array) {
 
 addTen(numbers);
 
-//Next Problem
+
+////////////////////////////////Next problem//////////////////////////////
+
 
 
 
